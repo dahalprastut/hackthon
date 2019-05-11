@@ -375,8 +375,26 @@ header{
 
 
 @media(max-width:600px){
+
+    header{
+        padding-left: 50px;
+        padding-right: 50px;
+        .data{
+            .left{
+                margin-right: 15px;
+            }
+        }
+    }
+
+
     .absolute{
         padding-top:50px; 
+
+        button{
+            font-size: 20px;
+            height: 150px;
+            line-height: 150px;
+        }
     }
 
     .card{
@@ -391,6 +409,21 @@ header{
                     span{
                         font-size: 30px;
                     }
+                }
+            }
+        }
+    }
+
+    .hiddenBox{
+        .cardHidden{
+            label{
+                font-size: 20px;
+                strong{
+                    font-size: 20px;
+                }
+                span{
+                    font-size: 25px;
+                    margin-right: 10px;
                 }
             }
         }

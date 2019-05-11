@@ -231,8 +231,18 @@ header {
   display: block; }
 
 @media (max-width: 600px) {
+  header {
+    padding-left: 50px;
+    padding-right: 50px; }
+    header .data .left {
+      margin-right: 15px; }
+
   .absolute {
     padding-top: 50px; }
+    .absolute button {
+      font-size: 20px;
+      height: 150px;
+      line-height: 150px; }
 
   .card .right-card .wrapper {
     left: 200px;
@@ -240,6 +250,14 @@ header {
     .card .right-card .wrapper strong {
       font-size: 20px; }
       .card .right-card .wrapper strong span {
-        font-size: 30px; } }
+        font-size: 30px; }
+
+  .hiddenBox .cardHidden label {
+    font-size: 20px; }
+    .hiddenBox .cardHidden label strong {
+      font-size: 20px; }
+    .hiddenBox .cardHidden label span {
+      font-size: 25px;
+      margin-right: 10px; } }
 
 /*# sourceMappingURL=style.css.map */
