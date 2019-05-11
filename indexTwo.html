@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
 </head>
 <body>
     <header>
@@ -82,10 +84,10 @@
                 <input type="radio" id="withdraw" name="asdf" value="withdraw">
                 <label for="withdraw">
                     <strong>WITHDRAW</strong>
-                    Current:  <span class="oneCurrent">32</span>Next  <span class="oneNext">0</span>
+                    Current:  <span class="oneCurrent">32</span>Next  <span class="oneNextLast">0</span>
                 </label>
             </div>
-            <span>ET: <small>45:00</small></span>
+            <span>ET: <small class="etWithdraw">45:00</small></span>
         </div>
         <div class="cardHidden">
             <div class="clearfix">
@@ -93,10 +95,10 @@
                 <input type="radio" id="deposite" name="asdf" value="deposite">
                 <label for="deposite">
                     <strong>DEPOSIT</strong>
-                    Current:  <span class="twoCurrent">32</span>Next  <span class="twoNext">0</span>
+                    Current:  <span class="twoCurrent">32</span>Next  <span class="twoNextLast">0</span>
                 </label>
             </div>
-            <span>ET: <small>45:00</small></span>
+            <span>ET: <small class="etDeposit">45:00</small></span>
             
         </div>
         <div class="cardHidden">
@@ -104,11 +106,11 @@
 
                 <input type="radio" id="moratage" name="asdf" value="moratage">
                 <label for="moratage">
-                    <strong>MORTAGE</strong>
-                    Current:  <span class="threeCurrent">32</span>Next  <span class="threeNext">0</span>
+                    <strong>MORTGAGE</strong>
+                    Current:  <span class="threeCurrent">32</span>Next  <span class="threeNextLast">0</span>
                 </label>
             </div>
-            <span>ET: <small>45:00</small></span>
+            <span>ET: <small class="etMortgage">45:00</small></span>
             
         </div>
 
@@ -199,10 +201,13 @@
         let current_issue = snap.current_issue;
         let last_issue = snap.last_issue;
         let transaction_time= snap.transaction_time;
+        let et = (last_issue - current_issue) * parseInt(transaction_time);
 
         $(".oneCurrent").text(current_issue);
         $(".oneNext").text(current_issue+1);
+        $(".oneNextLast").text(last_issue+1);
         $(".oneLast").text(last_issue);
+        $(".etWithdraw").text(time_convert(et));
 
 
     });
@@ -213,10 +218,14 @@
         let current_issue = snap.current_issue;
         let last_issue = snap.last_issue;
         let transaction_time= snap.transaction_time;
+        let et = (last_issue - current_issue) * parseInt(transaction_time);
 
         $(".twoCurrent").text(current_issue);
         $(".twoNext").text(current_issue+1);
+        $(".twoNextLast").text(last_issue+1);
         $(".twoLast").text(last_issue);
+        $(".etDeposit").text(time_convert(et));
+
 
 
     });
@@ -227,13 +236,27 @@
         let current_issue = snap.current_issue;
         let last_issue = snap.last_issue;
         let transaction_time= snap.transaction_time;
+        let et = (last_issue - current_issue) * parseInt(transaction_time);
 
         $(".threeCurrent").text(current_issue);
         $(".threeNext").text(current_issue+1);
+        $(".threeNextLast").text(last_issue+1);
         $(".threeLast").text(last_issue);
-
+        $(".etMortgage").text(time_convert(et));
 
     });
+
+    function time_convert(num)
+    {
+        let travelTime = moment().add(num, 'minutes').format('hh:mm A');
+        let hours = Math.floor(num / 60);
+        let minutes = num % 60;
+        return `${hours} Hour : ${minutes} Minute (${travelTime})`;
+    }
+
+
+
+
     </script>
 </body>
 </html>

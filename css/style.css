@@ -315,4 +315,40 @@ h4 {
   padding-bottom: 5px;
   color: #293339; }
 
+.lists {
+  margin-top: 20px; }
+  .lists .boxModel {
+    padding: 15px 0;
+    display: block;
+    text-decoration: none;
+    background-position: top;
+    background-size: cover;
+    height: 25vh;
+    position: relative;
+    margin-top: 10px; }
+    .lists .boxModel h2 {
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      text-align: center;
+      transform: translate(-35%, -50%);
+      color: #fff;
+      font-size: 22px; }
+      .lists .boxModel h2 span {
+        display: block;
+        font-size: 14px;
+        font-weight: 400; }
+  .lists .boxModel#sixth {
+    background: linear-gradient(to right bottom, rgba(96, 75, 155, 0.9), rgba(96, 75, 155, 0.9)), url(../img/siddhartha.jpg); }
+  .lists .boxModel#first {
+    background: linear-gradient(to right bottom, rgba(96, 75, 155, 0.9), rgba(96, 75, 155, 0.9)), url(../img/prabhu.jpg); }
+  .lists .boxModel#second {
+    background: linear-gradient(to right bottom, rgba(96, 75, 155, 0.9), rgba(96, 75, 155, 0.9)), url(../img/NMB.jpg); }
+  .lists .boxModel#third {
+    background: linear-gradient(to right bottom, rgba(96, 75, 155, 0.9), rgba(96, 75, 155, 0.9)), url(../img/nabil.jpg); }
+  .lists .boxModel#fourth {
+    background: linear-gradient(to right bottom, rgba(96, 75, 155, 0.9), rgba(96, 75, 155, 0.9)), url(../img/sbi.jpeg); }
+  .lists .boxModel#fifth {
+    background: linear-gradient(to right bottom, rgba(96, 75, 155, 0.9), rgba(96, 75, 155, 0.9)), url(../img/sc.jpg); }
+
 /*# sourceMappingURL=style.css.map */
