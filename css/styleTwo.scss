@@ -1,0 +1,41 @@
+
+$primary-mitho-color: #fff;
+$dark-gradient : #E1E9F2;
+$light-gradient: #EEF8FF;
+$text-primary-color : #293339;
+$text-secondary-color: #8E96AC;
+$text-pink-color: #CC7D93;
+$button-dark-color: #4166E2;
+$button-light-color: #369EDD;
+
+$button-other-color : #604B9B;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    background: linear-gradient($dark-gradient, $light-gradient);
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    max-width: 100%;
+    overflow-x:hidden; 
+}
+
+
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.center{
+    max-width: 1200px;
+    margin: auto;
+}
