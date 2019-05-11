@@ -7,6 +7,7 @@
     <title>Token</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -21,35 +22,35 @@
 
             <div class="data clearfix">
                 <div class="left">
-                    <strong>23</strong>
+                    <strong class="oneCurrent">0</strong>
                     <small>WITHDRAW</small>
                 </div>
 
                 <div class="left">
-                    <strong>25</strong>
-                    <small>DEPOSITE</small>
+                    <strong class="twoCurrent">0</strong>
+                    <small>DEPOSIT</small>
                 </div>
 
                 <div class="left">
-                    <strong>29</strong>
-                    <small>MORTAGE</small>
+                    <strong class="threeCurrent">0</strong>
+                    <small>MORTAGAGE</small>
                 </div>
             </div>
 
             <div class="data down-data clearfix">
                 <div class="left">
-                    <strong>73</strong>
+                    <strong class="oneLast">0</strong>
                     <small>WITHDRAW</small>
                 </div>
 
                 <div class="left">
-                    <strong>45</strong>
-                    <small>DEPOSITE</small>
+                    <strong class="twoLast">0</strong>
+                    <small>DEPOSIT</small>
                 </div>
 
                 <div class="left">
-                    <strong>99</strong>
-                    <small>MORTAGE</small>
+                    <strong class="threeLast">0</strong>
+                    <small>MORTAGAGE</small>
                 </div>
             </div>
 
@@ -93,7 +94,7 @@
 
                 <input type="radio" id="deposite" name="asdf" value="deposite">
                 <label for="deposite">
-                    <strong>DEPOSITE</strong>
+                    <strong>DEPOSIT</strong>
                     Current:  <span>32</span>Next  <span class="next">45</span>
                 </label>
             </div>
@@ -128,8 +129,8 @@
         <div class="right-card">
             <div class="wrapper">
 
-                <strong>TOKEN NUMBER: <span>23</span></strong>
-                <strong>NEXT NUMBER: <span>26</span></strong>
+                <strong>CURRENT NUMBER: <span class="oneCurrent">0</span></strong>
+                <strong>NEXT NUMBER: <span class="oneNext">0</span></strong>
             </div>
         </div>
     </div>
@@ -139,14 +140,14 @@
                 COUNTER
                 <small>2</small> 
             </strong>
-            <span>WITHDRAW</span>
+            <span>DEPOSIT</span>
 
         </div>
         <div class="right-card">
             <div class="wrapper">
 
-                <strong>TOKEN NUMBER: <span>29</span></strong>
-                <strong>NEXT NUMBER: <span>32</span></strong>
+                <strong>CURRENT NUMBER: <span class="twoCurrent">0</span></strong>
+                <strong>NEXT NUMBER: <span class="twoLast">0</span></strong>
             </div>
         </div>
     </div>
@@ -156,14 +157,14 @@
                 COUNTER
                 <small>3</small> 
             </strong>
-            <span>DEPOSITE</span>
+            <span>MORTAGAGE</span>
 
         </div>
         <div class="right-card">
             <div class="wrapper">
 
-                <strong>TOKEN NUMBER: <span>24</span></strong>
-                <strong>NEXT NUMBER: <span>27</span></strong>
+                <strong>CURRENT NUMBER: <span class="threeCurrent">0</span></strong>
+                <strong>NEXT NUMBER: <span class="threeLast">27</span></strong>
             </div>
         </div>
     </div>
@@ -189,5 +190,68 @@
 
 
     <script src="js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+
+    // Your web app's Firebase configuration
+
+    var firebase
+    config = {
+        apiKey: "AIzaSyDtNHzhttQMWtv6Q6ncaNz-X3ulULEW0Xs",
+        authDomain: "hackathon-af8bc.firebaseapp.com",
+        databaseURL: "https://hackathon-af8bc.firebaseio.com",
+        projectId: "hackathon-af8bc",
+        storageBucket: "hackathon-af8bc.appspot.com",
+        messagingSenderId: "966901725216",
+        appId: "1:966901725216:web:1d04fb356c7a4f31"
+    };
+    firebase.initializeApp(config);
+
+    let counter1 = firebase.database().ref('counter1');
+    let counter2 = firebase.database().ref('counter2');
+    let counter3 = firebase.database().ref('counter3');
+
+    counter1.on('value',function(snapshot) {
+
+        let snap = snapshot.val();
+        let current_issue = snap.current_issue;
+        let last_issue = snap.last_issue;
+        let transaction_time= snap.transaction_time;
+
+        $(".oneCurrent").text(current_issue);
+        $(".oneNext").text(current_issue+1);
+        $(".oneLast").text(last_issue);
+
+
+    });
+
+    counter2.on('value',function(snapshot) {
+
+        let snap = snapshot.val();
+        let current_issue = snap.current_issue;
+        let last_issue = snap.last_issue;
+        let transaction_time= snap.transaction_time;
+
+        $(".twoCurrent").text(current_issue);
+        $(".twoNext").text(current_issue+1);
+        $(".twoLast").text(last_issue);
+
+
+    });
+
+    counter3.on('value',function(snapshot) {
+
+        let snap = snapshot.val();
+        let current_issue = snap.current_issue;
+        let last_issue = snap.last_issue;
+        let transaction_time= snap.transaction_time;
+
+        $(".threeCurrent").text(current_issue);
+        $(".threeNext").text(current_issue+1);
+        $(".threeLast").text(last_issue);
+
+
+    });
+    </script>
 </body>
 </html>
