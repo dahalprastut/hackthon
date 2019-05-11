@@ -360,6 +360,7 @@ header{
         padding: 0 20px;
         font-size: 40px;
         line-height: 80px;
+        text-decoration: none;
     }
 }
 
@@ -583,6 +584,11 @@ h4{
         // background: url(../img/siddhartha.jpg);
         
     }
+    .boxModel#seventh{
+        background: linear-gradient(to right bottom, rgba(96,75,155,0.9), rgba(96,75,155,0.9)), url(../img/siddhartha.jpg); 
+        // background: url(../img/siddhartha.jpg);
+        
+    }
     .boxModel#first{
         background: linear-gradient(to right bottom, rgba(96,75,155,0.9), rgba(96,75,155,0.9)), url(../img/prabhu.jpg); 
         // background: url(../img/siddhartha.jpg);
@@ -608,4 +614,84 @@ h4{
         // background: url(../img/siddhartha.jpg);
         
     }
+}
+
+
+// INDEXtwo ends
+
+
+
+// booked starts
+
+
+.information{
+    background: #fff;
+    margin-top: 50px;
+    border: 1px solid #eee;
+    box-shadow: 1px 2px 1px 2px #ccc;
+    position: relative;
+    height: 30vh;
+
+    .hiddens-map-button{
+        position: absolute;
+        top:0;
+        right: 0;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        background: green;
+        color: #fff;
+        cursor: pointer;
+        border: 0;
+    }
+
+    h3{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%,-50%);
+        font-size: 32px;
+        color: green;
+        span{
+            display: block;
+            font-size: 20px;
+            font-weight: 400;
+            color: $text-primary-color;
+            margin-top: 8px;
+        }
+    }
+
+    .info-absolute{
+        position: absolute;
+        bottom: 55px;
+        left: 10%;
+
+        span{
+            display: block;
+            margin-left: 0px;
+            margin-top: 0px;
+            font-size: 18px;
+            color: $text-secondary-color;
+
+            small{
+                color: $text-primary-color;
+                font-size: 22px;
+                font-weight: 700;
+            }
+        }
+
+    }
+
+    .static-info{
+        position: absolute;
+        bottom: 20px;
+        left:10%;
+    }
+}
+
+.hidden-map{
+    margin-top: 50px;
+    display: none;
+    padding-left:15px;
 }

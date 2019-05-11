@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +17,7 @@
          
             <h2>
                 SIDDHARDHA BANK
-                <span>Lalitpur Branch</span>
+                <span>Kumaripati Branch</span>
             </h2>
 
             <div class="data clearfix">
@@ -68,16 +67,36 @@
     </header>
 
 
-    <div class="absolute">
-        <div class="center clearfix">
-            <button class="absolute-left"> Get Token</button>
-            <!-- <div class="timeCalc"> XXX time to get Your token</div> -->
-            <button class="absolute-right"> Book Token</button>
+    <div class="information">
+        <button class="hiddens-map-button">Show Map</button>
+        <h3>35
+            <span>2019-05-01</span>
+        </h3>
+        <div class="info-absolute">
+            <span>ET: <small class="etMortgage">45:00</small></span>
         </div>
+        <div class="static-info">
+            <small>*Note: Please reach before 10 mins as suggested time</small>
+        </div>
+
+    </div>
+
+    <div class="hidden-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3533.0344798409474!2d85.34417861467641!3d27.68532918306691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d27.686925199999997!2d85.3434103!4m5!1s0x39eb198c8d6a0639%3A0x99903dada8289577!2sTinkune+Park%2C+Ring+Road%2C+Kathmandu+44600!3m2!1d27.685365899999997!2d85.3488678!5e0!3m2!1sen!2snp!4v1557609137955!5m2!1sen!2snp" width="380" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
     </div>
 
 
-    <div class="hiddenBox">
+    <!-- <div class="absolute">
+        <div class="center clearfix">
+            <button class="absolute-left"> Get Token</button>
+            <button class="absolute-right"> Book Token</button>
+        </div>
+    </div> -->
+
+    <!-- dsafdsfdasfdafdasfdasfadsf -->
+
+
+    <!-- <div class="hiddenBox">
         <h3>PLEASE SELECT THE SERVICE YOU WANT</h3>
         <div class="cardHidden">
             <div class="clearfix">
@@ -115,8 +134,8 @@
             
         </div>
 
-        <a href="booked.html" class="bookSquare">BOOK IT</a>
-    </div>
+        <button class="bookSquare">BOOK IT</button>
+    </div> -->
 
     <div class="card clearfix">
         <div class="left-card">
@@ -257,7 +276,16 @@
 
 
 
+    document.querySelector('.hiddens-map-button').addEventListener('click', ()=>{
+        document.querySelector('.information').style.display="none";
+        document.querySelector('.hidden-map').style.display="block";
+    });
 
+
+    document.querySelector('.threeLast').addEventListener('click',()=>{
+        document.querySelector('.information').style.display="block";
+        document.querySelector('.hidden-map').style.display="none";
+    });
     </script>
 </body>
 </html>

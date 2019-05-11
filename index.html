@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body class="indexPage">
     
     <div class="searchBox">
         <input type="text" placeholder="Search">
-        <button>icon</button>
+        <button onclick="showHidden()">Search</button>
     </div>
 
     <h4>CHOOSE YOUR BANK</h4>
 
-    <div class="lists">
+    <div class="lists" id="oldLists">
         <a href="#" class="boxModel" id="first">
             <h2>PRABHU BANK
                 <span>21 Branches</span>
@@ -38,17 +40,37 @@
             </h2>
         </a>
         <a href="#" class="boxModel" id="fifth">
-            <h2>STANDARD CHATARD BANK
+            <h2>STANDARD STANDARD BANK
                 <span>11 Branches</span>
             </h2>
         </a>
-        <a href="#" class="boxModel" id="sixth">
-            <h2>STANDARD CHATARD BANK
+        <a href="indexTwo.html" class="boxModel" id="sixth" style="display: none">
+            <h2>SIDDHARTHA BANK
                 <span>Lalitpur Branch</span>
+            </h2>
+        </a>
+
+        <a href="#" class="boxModel" id="seventh" style="display: none">
+            <h2>SIDDHARTHA BANK
+                <span>Baneswor Branch</span>
             </h2>
         </a>
     </div>
 
+
     <script src="js/main.js"></script>
+    <script>
+
+
+        function showHidden() {
+            $("#first").hide();
+            $("#second").hide();
+            $("#third").hide();
+            $("#fourth").hide();
+            $("#fifth").hide();
+            $("#sixth").show();
+            $("#seventh").show();
+        }
+    </script>
 </body>
 </html>
