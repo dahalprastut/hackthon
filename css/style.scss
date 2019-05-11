@@ -144,21 +144,22 @@ header{
 
 
 .absolute{
-    padding: 100px 100px 50px 70px;
+    padding: 50px 100px 50px 70px;
 
     button{
         height: 200px;
         line-height: 200px;
-        // padding: 0 30px;
-        max-width: 200px;
-        font-size: 20px;
+        padding: 0 15px;
+        // max-width: 200px;
+        font-size: 16px;
         // background: linear-gradient($button-light-color, $button-light-color);
         background: $button-other-color;
-        border-radius: 50%;
+        // border-radius: 50%;
         color: #fff;
         border: none;
-
+        float: left;
         position: relative;
+        border-radius: 100px;
 
         span{
             position: absolute;
@@ -383,9 +384,9 @@ header{
         padding-top:50px; 
 
         button{
-            font-size: 20px;
-            height: 150px;
-            line-height: 150px;
+            font-size: 16px;
+            height: 50px;
+            line-height: 50px;
         }
     }
 
@@ -459,6 +460,31 @@ header{
                         font-size: 18px;
                     }
                 }
+            }
+        }
+    }
+
+    .hiddenBox{
+        padding:20px;
+        // padding-bottom: 20px;
+        // padding-top: 20px;
+        // padding-left: 20px;
+
+
+        h3{
+            font-size: 20px;
+        }
+
+        .bookSquare{
+            font-size: 20px;
+            height: 40px;
+            line-height: 40px;
+            margin-top: 20px;
+        }
+
+        .cardHidden{
+            >span{
+                margin-left:50px; 
             }
         }
     }
