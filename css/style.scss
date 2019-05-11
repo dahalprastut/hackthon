@@ -52,38 +52,30 @@ header{
 
    background: $primary-mitho-color;
 //    height: 30vh;
-   border-bottom-left-radius: 100px;
-   border-bottom-right-radius: 100px;
+   border-bottom-left-radius: 70px;
+   border-bottom-right-radius: 70px;
    background-size: cover;
-   padding: 100px 120px 100px 70px;
+   padding: 30px 120px 30px 70px;
    position: relative;
    box-shadow: 2px 5px 1px 1px #D7DFE7;
 
-   .back-button{
-       margin-bottom: 60px;
-
-       a{
-           text-decoration: none;
-           color: $text-secondary-color;
-           font-size: 22px;
-       }
-   }
 
    h2{
        color: $text-primary-color;
-       font-size: 50px;
+       font-size: 24px;
        letter-spacing: 1px;
        span{
            display: block;
-           font-size: 22px;
-           color: $text-secondary-color;
-           margin-top: 15px;
+           font-size: 16px;
+           color: #ccc;
+           margin-left: 18px;
+           margin-top: 10px;
            letter-spacing: 1px;
        }
    }
 
    .data{
-       margin-top: 60px;
+       margin-top: 30px;
 
        .left{
            float: left;
@@ -106,14 +98,14 @@ header{
         //    color: $text-primary-color;
            color: green;
            display: inline-block;
-           font-size: 40px;
+           font-size: 28px;
            font-weight: 700;
        }
 
        small{
            color: $text-secondary-color;
            display: block;
-           font-size: 22px;
+           font-size: 18px;
            margin-top: 10px;
        }
     }
@@ -152,14 +144,14 @@ header{
 
 
 .absolute{
-    padding: 300px 100px 100px 70px;
+    padding: 100px 100px 50px 70px;
 
     button{
         height: 200px;
         line-height: 200px;
         // padding: 0 30px;
         max-width: 200px;
-        font-size: 30px;
+        font-size: 20px;
         // background: linear-gradient($button-light-color, $button-light-color);
         background: $button-other-color;
         border-radius: 50%;
@@ -232,7 +224,7 @@ header{
             transform: translate(-50%, -50%);
             text-align: center;
             color: #fff;
-            font-size: 40px;
+            font-size: 28px;
 
             small{
                 display: block;
@@ -424,6 +416,48 @@ header{
                 span{
                     font-size: 25px;
                     margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:425px){
+    header{
+        .data{
+            .left{
+
+            }
+            small{
+                font-size: 18px;
+            }
+        }
+    }
+
+    .card{
+        height: 300px;
+        .left-card{
+            height: 300px;
+            strong{
+                font-size: 20px;
+            }
+
+            span{
+                font-size: 16px;
+            }
+        }
+
+        .right-card{
+            .wrapper{
+                left:120px;
+                top: 150px;
+
+                strong{
+                    font-size: 14px;
+                    span{
+                        font-size: 18px;
+                    }
                 }
             }
         }

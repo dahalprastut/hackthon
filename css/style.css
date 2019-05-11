@@ -22,30 +22,25 @@ body {
 
 header {
   background: #fff;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
   background-size: cover;
-  padding: 100px 120px 100px 70px;
+  padding: 30px 120px 30px 70px;
   position: relative;
   box-shadow: 2px 5px 1px 1px #D7DFE7; }
-  header .back-button {
-    margin-bottom: 60px; }
-    header .back-button a {
-      text-decoration: none;
-      color: #8E96AC;
-      font-size: 22px; }
   header h2 {
     color: #293339;
-    font-size: 50px;
+    font-size: 24px;
     letter-spacing: 1px; }
     header h2 span {
       display: block;
-      font-size: 22px;
-      color: #8E96AC;
-      margin-top: 15px;
+      font-size: 16px;
+      color: #ccc;
+      margin-left: 18px;
+      margin-top: 10px;
       letter-spacing: 1px; }
   header .data {
-    margin-top: 60px; }
+    margin-top: 30px; }
     header .data .left {
       float: left;
       width: 30%; }
@@ -57,12 +52,12 @@ header {
     header .data strong {
       color: green;
       display: inline-block;
-      font-size: 40px;
+      font-size: 28px;
       font-weight: 700; }
     header .data small {
       color: #8E96AC;
       display: block;
-      font-size: 22px;
+      font-size: 18px;
       margin-top: 10px; }
   header .down-data strong {
     color: red; }
@@ -82,12 +77,12 @@ header {
     background: #604B9B; }
 
 .absolute {
-  padding: 300px 100px 100px 70px; }
+  padding: 100px 100px 50px 70px; }
   .absolute button {
     height: 200px;
     line-height: 200px;
     max-width: 200px;
-    font-size: 30px;
+    font-size: 20px;
     background: #604B9B;
     border-radius: 50%;
     color: #fff;
@@ -137,7 +132,7 @@ header {
       transform: translate(-50%, -50%);
       text-align: center;
       color: #fff;
-      font-size: 40px; }
+      font-size: 28px; }
       .card .left-card strong small {
         display: block;
         margin-top: 10px;
@@ -259,5 +254,24 @@ header {
     .hiddenBox .cardHidden label span {
       font-size: 25px;
       margin-right: 10px; } }
+@media (max-width: 425px) {
+  header .data small {
+    font-size: 18px; }
+
+  .card {
+    height: 300px; }
+    .card .left-card {
+      height: 300px; }
+      .card .left-card strong {
+        font-size: 20px; }
+      .card .left-card span {
+        font-size: 16px; }
+    .card .right-card .wrapper {
+      left: 120px;
+      top: 150px; }
+      .card .right-card .wrapper strong {
+        font-size: 14px; }
+        .card .right-card .wrapper strong span {
+          font-size: 18px; } }
 
 /*# sourceMappingURL=style.css.map */
