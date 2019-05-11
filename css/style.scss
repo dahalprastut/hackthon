@@ -285,3 +285,88 @@ header{
     }
 
 }
+
+
+
+.hiddenBox{
+    border: 1px solid #000;
+    padding: 100px 100px 100px 70px;
+    box-shadow: 1px 2px 1px 2px #ccc;
+    display: none;
+
+    h3{
+        font-size: 40px;
+        color: $text-primary-color;
+        font-weight: 700;
+    }
+
+
+    .cardHidden{
+        margin-top: 30px;
+        width: 100%;
+        background: #fff;
+        padding: 20px 10px;
+
+        input{
+            height: 40px;
+            width: 40px;
+            float: left;
+        }
+
+        label{
+            float: left;
+            margin-left: 50px;
+            width: 70%;
+            font-size: 30px;
+
+            strong{
+                font-size: 38px;
+                color: $text-primary-color;
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            span{
+                font-size: 38px;
+                color: green;
+                margin-right: 50px;
+            }
+
+            .next{
+                color: red;
+            }
+
+
+        }
+
+        > span{
+            display: block;
+            margin-left: 90px;
+            margin-top: 50px;
+            font-size: 30px;
+            color: $text-secondary-color;
+
+            small{
+                color: $text-primary-color;
+                font-size: 38px;
+                font-weight: 700;
+            }
+        }
+
+    }
+    .bookSquare{
+        margin-top: 50px;
+        display: inline-block; 
+        background: $button-other-color;
+        color: #fff;
+        height: 80px;
+        padding: 0 20px;
+        font-size: 40px;
+        line-height: 80px;
+    }
+}
+
+
+.shownBox .hiddenBox{
+    display: block;
+}

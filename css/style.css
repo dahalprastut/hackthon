@@ -174,4 +174,61 @@ header {
           font-weight: 700;
           font-size: 50px; }
 
+.hiddenBox {
+  border: 1px solid #000;
+  padding: 100px 100px 100px 70px;
+  box-shadow: 1px 2px 1px 2px #ccc;
+  display: none; }
+  .hiddenBox h3 {
+    font-size: 40px;
+    color: #293339;
+    font-weight: 700; }
+  .hiddenBox .cardHidden {
+    margin-top: 30px;
+    width: 100%;
+    background: #fff;
+    padding: 20px 10px; }
+    .hiddenBox .cardHidden input {
+      height: 40px;
+      width: 40px;
+      float: left; }
+    .hiddenBox .cardHidden label {
+      float: left;
+      margin-left: 50px;
+      width: 70%;
+      font-size: 30px; }
+      .hiddenBox .cardHidden label strong {
+        font-size: 38px;
+        color: #293339;
+        display: block;
+        margin-bottom: 20px; }
+      .hiddenBox .cardHidden label span {
+        font-size: 38px;
+        color: green;
+        margin-right: 50px; }
+      .hiddenBox .cardHidden label .next {
+        color: red; }
+    .hiddenBox .cardHidden > span {
+      display: block;
+      margin-left: 90px;
+      margin-top: 50px;
+      font-size: 30px;
+      color: #8E96AC; }
+      .hiddenBox .cardHidden > span small {
+        color: #293339;
+        font-size: 38px;
+        font-weight: 700; }
+  .hiddenBox .bookSquare {
+    margin-top: 50px;
+    display: inline-block;
+    background: #604B9B;
+    color: #fff;
+    height: 80px;
+    padding: 0 20px;
+    font-size: 40px;
+    line-height: 80px; }
+
+.shownBox .hiddenBox {
+  display: block; }
+
 /*# sourceMappingURL=style.css.map */
