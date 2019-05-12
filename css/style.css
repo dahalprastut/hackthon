@@ -163,7 +163,7 @@ header {
       max-width: 60%; }
       .card .right-card .wrapper strong {
         display: block;
-        font-size: 40px;
+        font-size: 32px;
         margin-bottom: 10px; }
         .card .right-card .wrapper strong span {
           font-weight: 700;
@@ -245,9 +245,9 @@ header {
     left: 200px;
     width: 100%; }
     .card .right-card .wrapper strong {
-      font-size: 20px; }
+      font-size: 18px; }
       .card .right-card .wrapper strong span {
-        font-size: 30px; }
+        font-size: 20px; }
 
   .hiddenBox .cardHidden label, .hiddenForBook .cardHidden label {
     font-size: 20px; }
@@ -272,9 +272,9 @@ header {
       left: 120px;
       top: 150px; }
       .card .right-card .wrapper strong {
-        font-size: 14px; }
+        font-size: 12px; }
         .card .right-card .wrapper strong span {
-          font-size: 18px; }
+          font-size: 16px; }
 
   .hiddenBox, .hiddenForBook {
     padding: 20px; }
