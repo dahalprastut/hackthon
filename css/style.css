@@ -35,7 +35,7 @@ header {
     header h2 span {
       display: block;
       font-size: 16px;
-      color: #ccc;
+      color: #000;
       margin-left: 18px;
       margin-top: 10px;
       letter-spacing: 1px; }
@@ -169,51 +169,51 @@ header {
           font-weight: 700;
           font-size: 50px; }
 
-.hiddenBox {
+.hiddenBox, .hiddenForBook {
   border: 1px solid #000;
   padding: 100px 100px 100px 70px;
   box-shadow: 1px 2px 1px 2px #ccc;
   display: none; }
-  .hiddenBox h3 {
+  .hiddenBox h3, .hiddenForBook h3 {
     font-size: 40px;
     color: #293339;
     font-weight: 700; }
-  .hiddenBox .cardHidden {
+  .hiddenBox .cardHidden, .hiddenForBook .cardHidden {
     margin-top: 30px;
     max-width: 100%;
     background: #fff;
     padding: 20px 10px; }
-    .hiddenBox .cardHidden input {
+    .hiddenBox .cardHidden input, .hiddenForBook .cardHidden input {
       height: 40px;
       max-width: 40px;
       float: left; }
-    .hiddenBox .cardHidden label {
+    .hiddenBox .cardHidden label, .hiddenForBook .cardHidden label {
       float: left;
       margin-left: 50px;
       max-width: 70%;
       font-size: 30px; }
-      .hiddenBox .cardHidden label strong {
+      .hiddenBox .cardHidden label strong, .hiddenForBook .cardHidden label strong {
         font-size: 38px;
         color: #293339;
         display: block;
         margin-bottom: 20px; }
-      .hiddenBox .cardHidden label span {
+      .hiddenBox .cardHidden label span, .hiddenForBook .cardHidden label span {
         font-size: 38px;
         color: green;
         margin-right: 50px; }
-      .hiddenBox .cardHidden label .next {
+      .hiddenBox .cardHidden label .next, .hiddenForBook .cardHidden label .next {
         color: red; }
-    .hiddenBox .cardHidden > span {
+    .hiddenBox .cardHidden > span, .hiddenForBook .cardHidden > span {
       display: block;
       margin-left: 90px;
       margin-top: 50px;
       font-size: 30px;
       color: #8E96AC; }
-      .hiddenBox .cardHidden > span small {
+      .hiddenBox .cardHidden > span small, .hiddenForBook .cardHidden > span small {
         color: #293339;
         font-size: 38px;
         font-weight: 700; }
-  .hiddenBox .bookSquare {
+  .hiddenBox .bookSquare, .hiddenForBook .bookSquare {
     margin-top: 50px;
     display: inline-block;
     background: #604B9B;
@@ -249,11 +249,11 @@ header {
       .card .right-card .wrapper strong span {
         font-size: 30px; }
 
-  .hiddenBox .cardHidden label {
+  .hiddenBox .cardHidden label, .hiddenForBook .cardHidden label {
     font-size: 20px; }
-    .hiddenBox .cardHidden label strong {
+    .hiddenBox .cardHidden label strong, .hiddenForBook .cardHidden label strong {
       font-size: 20px; }
-    .hiddenBox .cardHidden label span {
+    .hiddenBox .cardHidden label span, .hiddenForBook .cardHidden label span {
       font-size: 25px;
       margin-right: 10px; } }
 @media (max-width: 425px) {
@@ -276,25 +276,25 @@ header {
         .card .right-card .wrapper strong span {
           font-size: 18px; }
 
-  .hiddenBox {
+  .hiddenBox, .hiddenForBook {
     padding: 20px; }
-    .hiddenBox h3 {
+    .hiddenBox h3, .hiddenForBook h3 {
       font-size: 18px; }
-    .hiddenBox .bookSquare {
+    .hiddenBox .bookSquare, .hiddenForBook .bookSquare {
       font-size: 20px;
       height: 40px;
       line-height: 40px;
       margin-top: 20px; }
-    .hiddenBox .cardHidden label strong {
+    .hiddenBox .cardHidden label strong, .hiddenForBook .cardHidden label strong {
       font-size: 16px;
       margin-bottom: 10px; }
-    .hiddenBox .cardHidden label span {
+    .hiddenBox .cardHidden label span, .hiddenForBook .cardHidden label span {
       font-size: 18px; }
-    .hiddenBox .cardHidden > span {
+    .hiddenBox .cardHidden > span, .hiddenForBook .cardHidden > span {
       margin-left: 60px;
       margin-top: 20px;
       font-size: 20px; }
-      .hiddenBox .cardHidden > span small {
+      .hiddenBox .cardHidden > span small, .hiddenForBook .cardHidden > span small {
         font-size: 18px; } }
 .indexPage {
   padding-top: 50px; }
@@ -354,6 +354,17 @@ h4 {
   .lists .boxModel#fifth {
     background: linear-gradient(to right bottom, rgba(96, 75, 155, 0.9), rgba(96, 75, 155, 0.9)), url(../img/sc.jpg); }
 
+.pleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  background: green;
+  color: #fff;
+  border: 0; }
+
 .information {
   background: #fff;
   margin-top: 50px;
@@ -409,5 +420,45 @@ h4 {
   margin-top: 50px;
   display: none;
   padding-left: 15px; }
+
+.alertedOnClick {
+  position: relative;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  background: #604B9B;
+  color: #fff;
+  padding: 20px;
+  height: 20vh;
+  display: none; }
+  .alertedOnClick h3 {
+    font-size: 14px;
+    font-weight: 400; }
+  .alertedOnClick a {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    text-decoration: none;
+    background: #fff;
+    color: #000;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 18px; }
+  .alertedOnClick .thanks {
+    right: 20px;
+    left: auto; }
+
+.hiddenForBook {
+  display: none; }
+  .hiddenForBook .cardHidden {
+    margin-bottom: 10px; }
+  .hiddenForBook > input {
+    width: 160px;
+    margin-top: 10px;
+    height: 50px; }
+
+.shownTwo .hiddenForBook {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

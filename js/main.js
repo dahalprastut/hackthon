@@ -3,8 +3,14 @@ document.querySelector('.absolute-left').addEventListener('click' , ()=>{
 });
 
 
-document.querySelector('.hiddens-map-button').addEventListener('click', ()=>{
-    alert('asdf');
-    console.log('asdf')
-    document.querySelector('.information').style.display="none";
-})
+document.querySelector('.bookSquare').addEventListener('click' , ()=>{
+    document.querySelector('.alertedOnClick').style.display="block";
+});
+
+
+document.querySelector('.absolute-right').addEventListener('click' , ()=>{
+    document.querySelector('body').classList.toggle('shownTwo');
+});
+
+
+

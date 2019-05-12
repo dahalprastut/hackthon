@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,41 +17,41 @@
         <div class="center">
          
             <h2>
-                SIDDHARDHA BANK
+                SIDHARTHA BANK
                 <span>Kumaripati Branch</span>
             </h2>
 
             <div class="data clearfix">
                 <div class="left">
-                    <strong class="oneCurrent">0</strong>
+                    <strong class="oneCurrent1">10</strong>
                     <small>WITHDRAW</small>
                 </div>
 
                 <div class="left">
-                    <strong class="twoCurrent">0</strong>
+                    <strong class="twoCurrent1">21</strong>
                     <small>DEPOSIT</small>
                 </div>
 
                 <div class="left">
-                    <strong class="threeCurrent">0</strong>
-                    <small>MORTAGAGE</small>
+                    <strong class="threeCurrent1">32</strong>
+                    <small>MORTGAGE</small>
                 </div>
             </div>
 
             <div class="data down-data clearfix">
                 <div class="left">
-                    <strong class="oneLast">0</strong>
+                    <strong class="oneLast1">32</strong>
                     <small>WITHDRAW</small>
                 </div>
 
                 <div class="left">
-                    <strong class="twoLast">0</strong>
+                    <strong class="twoLast1">47</strong>
                     <small>DEPOSIT</small>
                 </div>
 
                 <div class="left">
-                    <strong class="threeLast">0</strong>
-                    <small>MORTAGAGE</small>
+                    <strong class="threeLast1">78</strong>
+                    <small>MORTGAGE</small>
                 </div>
             </div>
 
@@ -68,9 +69,11 @@
 
 
     <div class="information">
+        <p class="pleft">WITHDRAW</p>
+
         <button class="hiddens-map-button">Show Map</button>
-        <h3>35
-            <span>2019-05-01</span>
+        <h3><p class="myToken">35</p>
+            <span id="today">2019-05-01</span>
         </h3>
         <div class="info-absolute">
             <span>ET: <small class="etMortgage">45:00</small></span>
@@ -177,14 +180,14 @@
                 COUNTER
                 <small>3</small> 
             </strong>
-            <span>MORTAGAGE</span>
+            <span>MORTGAGE</span>
 
         </div>
         <div class="right-card">
             <div class="wrapper">
 
                 <strong>CURRENT NUMBER: <span class="threeCurrent">0</span></strong>
-                <strong>NEXT NUMBER: <span class="threeNext">27</span></strong>
+                <strong>NEXT NUMBER: <span class="threeNext">0</span></strong>
             </div>
         </div>
     </div>
@@ -227,7 +230,7 @@
         $(".oneNext").text(current_issue+1);
         $(".oneNextLast").text(last_issue+1);
         $(".oneLast").text(last_issue);
-        $(".etWithdraw").text(time_convert(et));
+        $(".etWithdraw").text(time_convert(et-30));
 
 
     });
@@ -244,7 +247,7 @@
         $(".twoNext").text(current_issue+1);
         $(".twoNextLast").text(last_issue+1);
         $(".twoLast").text(last_issue);
-        $(".etDeposit").text(time_convert(et));
+        $(".etDeposit").text(time_convert(et-50));
 
 
 
@@ -262,7 +265,7 @@
         $(".threeNext").text(current_issue+1);
         $(".threeNextLast").text(last_issue+1);
         $(".threeLast").text(last_issue);
-        $(".etMortgage").text(time_convert(et));
+        $(".etMortgage").text(time_convert(et-50));
 
     });
 
@@ -274,6 +277,10 @@
         return `${hours} Hour : ${minutes} Minute (${travelTime})`;
     }
 
+    var getCurrent = $(".oneCurrent").text();
+    $('.myToken').text(parseInt(getCurrent)+13);
+
+
 
 
     document.querySelector('.hiddens-map-button').addEventListener('click', ()=>{
@@ -282,10 +289,12 @@
     });
 
 
-    document.querySelector('.threeLast').addEventListener('click',()=>{
+    document.querySelector('.threeLast1').addEventListener('click',()=>{
         document.querySelector('.information').style.display="block";
         document.querySelector('.hidden-map').style.display="none";
     });
+
+    $("#today").text(moment(new Date()).format('MM/DD/YYYY'));
     </script>
 </body>
 </html>
